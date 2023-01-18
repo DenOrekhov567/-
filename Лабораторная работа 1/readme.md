@@ -31,4 +31,11 @@ def sort():
 |10000     |29.078     |  
 ---  
 *** 
----   
+---  
+def sort_merge(lst):
+    if len(lst) < 2:
+        return lst
+    middle = len(lst) // 2
+    left = sort_merge(lst[:middle])
+    right = sort_merge(lst[middle:])
+    return task1(left, right)
