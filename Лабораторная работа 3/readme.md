@@ -42,7 +42,7 @@ def sort_quick(lst):
     return sort_quick(left) + middle + sort_quick(right)
 ```  
 ### **Быстрая сортировка после:** 
-def task2(lst):
+def sort_quick(lst):
     if len(lst) > 2: 
         pivot = lst[0]
         
