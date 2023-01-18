@@ -19,6 +19,13 @@ def sort():
             g += 1 # передвигаем элемент для следующего сравнения
         lst[g-1] = n # убирает
     print(lst)
+def sort_merge(lst):
+    if len(lst) < 2:
+        return lst
+    middle = len(lst) // 2
+    left = sort_merge(lst[:middle])
+    right = sort_merge(lst[middle:])
+    return task1(left, right)
 ```  
 ### **Проведение опыта**  
 После разработки и проверки алгоритма были получены следующие результаты:  
@@ -32,10 +39,4 @@ def sort():
 ---  
 *** 
 ---  
-def sort_merge(lst):
-    if len(lst) < 2:
-        return lst
-    middle = len(lst) // 2
-    left = sort_merge(lst[:middle])
-    right = sort_merge(lst[middle:])
-    return task1(left, right)
+
